@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salário e Férias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Salário e Férias</h1>
+        <div class="calculator">
+            <label for="salarioBruto">Salário Bruto:</label>
+            <input type="number" id="salarioBruto" placeholder="Digite o salário bruto">
+
+            <label for="quantosDependentes">Número de Dependentes:</label>
+            <input type="number" id="quantosDependentes" placeholder="Digite o número de dependentes">
+
+            <label for="ferias">Deseja Férias?</label>
+            <select id="ferias">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+
+            <div id="feriasDias" style="display: none;">
+                <label for="quantidadeDiasFerias">Quantidade de Dias de Férias:</label>
+                <input type="number" id="quantidadeDiasFerias" placeholder="Digite a quantidade de dias de férias">
+            </div>
+
+            <button onclick="calcularSalarioLiquido()">Calcular</button>
+
+            <div class="result">
+                <div class="salary">
+                    <h2>Salário Líquido</h2>
+                    <p id="resultado">O valor do salário é R$0.00</p>
+                    <p id="descontoINSS">Desconto do INSS: R$0.00</p>
+                    <p id="descontoIRRF">Desconto do IRRF: R$0.00</p>
+                    <p id="descontoDependente">Desconto de Dependentes: R$0.00</p>
+                </div>
+
+                <div class="vacation" id="feriasResult" style="display: none;">
+                    <h2>Férias</h2>
+                    <p id="valorFerias">Valor das Férias: R$0.00</p>
+                    <p id="umTercoFerias">1/3 Constitucional das Férias: R$0.00</p>
+                    <p id="descontoINSSFerias">Desconto do INSS nas Férias: R$0.00</p>
+                    <p id="descontoIRRFerias">Desconto do IRRF nas Férias: R$0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
